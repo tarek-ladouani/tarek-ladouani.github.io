@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarek Ladouani – Bewerbungsportal</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1 class="logo">Tarek Ladouani</h1>
+            <ul class="nav-links">
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Erfahrung</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Dark Mode umschalten">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero-Bereich -->
+    <header id="hero">
+        <div class="container">
+            <h2>Hallo, ich bin <span class="highlight">Tarek Ladouani</span></h2>
+            <p class="subtitle">Angehender Fachinformatiker für Systemintegration</p>
+            <p class="tagline">
+                IT-Support | Netzwerktechnik | Betriebssysteme | IT-Sicherheit
+            </p>
+            <a href="#contact" class="btn">Kontakt aufnehmen</a>
+        </div>
+    </header>
+
+    <!-- Über mich -->
+    <section id="about">
+        <div class="container">
+            <h2>Über mich</h2>
+            <p>
+                Nach meinem Fachabitur habe ich ein Informatikstudium begonnen und schnell festgestellt,
+                dass mich die <strong>praxisnahe Arbeit mit IT-Systemen</strong> deutlich stärker begeistert
+                als die theoretischen Inhalte. Diese Erkenntnis hat meinen Entschluss gefestigt,
+                eine fundierte und anwendungsorientierte Ausbildung zu verfolgen.
+            </p>
+            <p>
+                Mit dem erfolgreich abgeschlossenen <strong>Google IT Support Professional Certificate</strong>
+                habe ich mir strukturierte Kenntnisse in <strong>Netzwerktechnik, Betriebssystemen
+                und IT-Sicherheit</strong> angeeignet, die ich in einer professionellen Umgebung
+                weiterentwickeln möchte.
+            </p>
+            <p>
+                Ich bin <strong>motiviert, zuverlässig und lernbereit</strong> – und freue mich darauf,
+                Teil eines dynamischen IT-Teams zu werden.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2>Meine Fähigkeiten</h2>
+            <div class="skills-grid">
+                <div class="skill-card">💻 Windows &amp; Linux (Ubuntu)</div>
+                <div class="skill-card">🌐 Netzwerktechnik</div>
+                <div class="skill-card">🔒 IT-Sicherheit</div>
+                <div class="skill-card">🖥️ Systemadministration</div>
+                <div class="skill-card">📧 Google IT Support Certificate</div>
+                <div class="skill-card">📊 MS Office (Grundkenntnisse)</div>
+                <div class="skill-card">🗣️ Deutsch (Muttersprache)</div>
+                <div class="skill-card">🗣️ Arabisch (2. Muttersprache)</div>
+                <div class="skill-card">🗣️ Englisch (Gut)</div>
+                <div class="skill-card">🗣️ Französisch (Grundkenntnisse)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berufserfahrung -->
+    <section id="experience">
+        <div class="container">
+            <h2>Praktische Erfahrung</h2>
+            <div class="experience-grid">
+                <div class="exp-card">
+                    <h3>🛒 Aldi, Kehl</h3>
+                    <p class="exp-date">08.2019 – 2 Wochen</p>
+                    <p>Praktikum im Einzelhandel – Kundenservice, Warenwirtschaft</p>
+                </div>
+                <div class="exp-card">
+                    <h3>💊 Rohans Anker Apotheke, Kehl</h3>
+                    <p class="exp-date">03.2018 – 1 Woche</p>
+                    <p>Praktikum – Organisation, Lagerwirtschaft, Kundenbetreuung</p>
+                </div>
+                <div class="exp-card">
+                    <h3>📚 Schülerhilfe, Kehl</h3>
+                    <p class="exp-date">05.2018 – 1 Woche</p>
+                    <p>Praktikum – Nachhilfe, pädagogische Unterstützung</p>
+                </div>
+                <div class="exp-card">
+                    <h3>🚗 BHG / Audi, Kehl</h3>
+                    <p class="exp-date">01.2016 – 1 Woche</p>
+                    <p>Praktikum – Einblicke in den Autohandel und Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projects">
+        <div class="container">
+            <h2>Meine Projekte</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🔧 Projekt 1</h3>
+                    <p>Hier kannst du dein erstes IT-Projekt beschreiben – z.B. einen eigenen PC zusammengebaut, ein Netzwerk eingerichtet oder einen Server aufgesetzt.</p>
+                    <a href="#" class="btn-small">Mehr erfahren</a>
+                </div>
+                <div class="project-card">
+                    <h3>🌐 Projekt 2</h3>
+                    <p>Hier beschreibst du dein zweites Projekt – z.B. eine Website programmiert, eine virtuelle Maschine eingerichtet oder eine IT-Sicherheitsanalyse durchgeführt.</p>
+                    <a href="#" class="btn-small">Mehr erfahren</a>
+                </div>
+                <div class="project-card">
+                    <h3>📡 Projekt 3</h3>
+                    <p>Hier kommt dein drittes Projekt – vielleicht ein kleines Skript in Python oder Bash, ein Netzwerk-Setup oder eine Helpdesk-Simulation.</p>
+                    <a href="#" class="btn-small">Mehr erfahren</a>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:20px;">
+                <em>Tipp: Ersetze die Platzhalter mit deinen eigenen Projekten aus dem Studium oder Hobby-Bereich!</em>
+            </p>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <div class="contact-info">
+                <p><strong>📧 E-Mail:</strong> <a href="mailto:ladouani.tarek@gmail.com">ladouani.tarek@gmail.com</a></p>
+                <p><strong>📞 Telefon:</strong> <a href="tel:+4915204078963">0152 040 789 63</a></p>
+                <p><strong>📍 Adresse:</strong> Richard-Wagner-Str. 19, 77694 Kehl</p>
+                <p><strong>🚗 Führerschein:</strong> Klasse B</p>
+            </div>
+            <a href="mailto:ladouani.tarek@gmail.com" class="btn">Jetzt E-Mail schreiben</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tarek Ladouani. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
