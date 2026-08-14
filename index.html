@@ -105,30 +105,94 @@
         </div>
     </section>
 
-    <!-- Projekte -->
+       <!-- Projekte / Homelab -->
     <section id="projects">
         <div class="container">
-            <h2>Meine Projekte</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>🔧 Projekt 1</h3>
-                    <p>Hier kannst du dein erstes IT-Projekt beschreiben – z.B. einen eigenen PC zusammengebaut, ein Netzwerk eingerichtet oder einen Server aufgesetzt.</p>
-                    <a href="#" class="btn-small">Mehr erfahren</a>
-                </div>
-                <div class="project-card">
-                    <h3>🌐 Projekt 2</h3>
-                    <p>Hier beschreibst du dein zweites Projekt – z.B. eine Website programmiert, eine virtuelle Maschine eingerichtet oder eine IT-Sicherheitsanalyse durchgeführt.</p>
-                    <a href="#" class="btn-small">Mehr erfahren</a>
-                </div>
-                <div class="project-card">
-                    <h3>📡 Projekt 3</h3>
-                    <p>Hier kommt dein drittes Projekt – vielleicht ein kleines Skript in Python oder Bash, ein Netzwerk-Setup oder eine Helpdesk-Simulation.</p>
-                    <a href="#" class="btn-small">Mehr erfahren</a>
-                </div>
-            </div>
-            <p style="text-align:center; margin-top:20px;">
-                <em>Tipp: Ersetze die Platzhalter mit deinen eigenen Projekten aus dem Studium oder Hobby-Bereich!</em>
+            <h2>🧪 Mein Homelab & Projekte</h2>
+            <p style="text-align:center; max-width:700px; margin: -20px auto 40px; color: var(--primary-light);">
+                Hier zeige ich, was ich in meiner Freizeit aufgebaut habe – ganz praktisch, ohne Tutorial-Copy-Paste.
             </p>
+
+            <div class="projects-grid">
+
+                <!-- Projekt 1: Hardware & Vorbereitung -->
+                <div class="project-card">
+                    <div class="project-icon">🖥️</div>
+                    <h3>Homelab – Vom Büro-PC zum Server</h3>
+                    <div class="project-tags">
+                        <span class="tag">Hardware</span>
+                        <span class="tag">BIOS</span>
+                        <span class="tag">Optimierung</span>
+                    </div>
+                    <p>
+                        <strong>Was:</strong> Dell-Laptop mit BIOS 1.8.0, RAM-Upgrade von 4GB auf 8GB,
+                        Bloatware entfernt, Treiber manuell installiert.
+                    </p>
+                    <p>
+                        <strong>Gelernt:</strong> Systemvorbereitung für Virtualisierung,
+                        Performance-Optimierung, Hardware-Kompatibilität prüfen.
+                    </p>
+                    <div class="project-links">
+                        <span class="status success">✅ Abgeschlossen</span>
+                    </div>
+                </div>
+
+                <!-- Projekt 2: Docker & Containerisierung -->
+                <div class="project-card">
+                    <div class="project-icon">🐳</div>
+                    <h3>Containerisierung mit Docker</h3>
+                    <div class="project-tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">WSL2</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                    <p>
+                        <strong>Was:</strong> WSL2 + Ubuntu 24.04 installiert, Docker mit
+                        Nginx, PHP 8.2 und MariaDB als Multi-Container-Setup mit
+                        <code>docker-compose.yml</code>.
+                    </p>
+                    <p>
+                        <strong>Gelernt:</strong> Container vs. VMs, Volumes für persistente Daten,
+                        Port-Mapping, Container mit <code>docker exec</code> betreten,
+                        Logs lesen für Fehlerbehebung.
+                    </p>
+                    <div class="project-links">
+                        <span class="status success">✅ Läuft</span>
+                    </div>
+                </div>
+
+                <!-- Projekt 3: Gästebuch-App -->
+                <div class="project-card">
+                    <div class="project-icon">📝</div>
+                    <h3>Gästebuch mit PHP &amp; Datenbank</h3>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Webentwicklung</span>
+                    </div>
+                    <p>
+                        <strong>Was:</strong> Dynamische Webanwendung – Formular für Name + Nachricht,
+                        Speicherung in MariaDB mit <code>INSERT</code>, Anzeige mit <code>SELECT</code>,
+                        Zeitzone auf Europe/Berlin gesetzt.
+                    </p>
+                    <p>
+                        <strong>Gelernt:</strong> PHP + MySQLi für Datenbankzugriff,
+                        SQL-Befehle, Fehlerbehebung mit Logs,
+                        Container-übergreifende Kommunikation.
+                    </p>
+                    <div class="project-links">
+                        <span class="status success">✅ Funktioniert live</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Zusatz-Info -->
+            <div style="text-align:center; margin-top:40px; padding:20px; background:var(--card-bg); border-radius:12px;">
+                <p style="font-size:0.95rem;">
+                    🔗 Mein ganzes Setup ist dokumentiert – bei Interesse zeige ich gerne mehr Details im Gespräch!
+                </p>
+            </div>
         </div>
     </section>
 
