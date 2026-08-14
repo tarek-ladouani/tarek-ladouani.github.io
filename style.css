@@ -6,16 +6,17 @@
 }
 
 :root {
-    --bg: #ffffff;
-    --text: #1a1a2e;
-    --primary: #1a5276;      /* Dunkelblau – seriös, professionell */
-    --primary-light: #2980b9;
-    --card-bg: #f0f4f8;
-    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --bg: #0a0a0f;
+    --text: #e5e7eb;
+    --primary: #00d4ff;
+    --primary-dark: #0099cc;
+    --card-bg: rgba(255,255,255,0.03);
+    --card-border: rgba(255,255,255,0.05);
+    --shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -28,19 +29,26 @@ body {
     padding: 0 20px;
 }
 
-/* ---------- Dark Mode ---------- */
+/* ---------- Dark Mode (Standard) ---------- */
 body.dark {
-    --bg: #1a1a2e;
-    --text: #eaeaea;
-    --card-bg: #2a2a4a;
-    --shadow: 0 4px 20px rgba(0,0,0,0.4);
+    --bg: #0a0a0f;
+    --text: #e5e7eb;
+    --card-bg: rgba(255,255,255,0.03);
+    --card-border: rgba(255,255,255,0.05);
+}
+
+/* ---------- Schriftarten ---------- */
+h1, h2, h3, .logo, .nav-links a, .terminal-line {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 /* ---------- Navigation ---------- */
 nav {
-    background: var(--bg);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 15px 0;
+    background: rgba(10,10,15,0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--card-border);
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -54,9 +62,14 @@ nav .container {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary);
+    letter-spacing: 0.5px;
+}
+
+.logo:hover {
+    color: #fff;
 }
 
 .nav-links {
@@ -71,6 +84,7 @@ nav .container {
     color: var(--text);
     font-weight: 500;
     transition: color 0.2s;
+    font-size: 0.95rem;
 }
 
 .nav-links a:hover {
@@ -91,7 +105,7 @@ nav .container {
 
 #theme-toggle:hover {
     background: var(--primary);
-    color: #fff;
+    color: #0a0a0f;
     border-color: var(--primary);
 }
 
@@ -99,64 +113,107 @@ nav .container {
 #hero {
     padding: 80px 0 60px;
     text-align: center;
-    background: linear-gradient(135deg, #eaf2f8 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-body.dark #hero {
-    background: linear-gradient(135deg, #1a2a3a 0%, #1a1a2e 100%);
+#hero .container {
+    width: 100%;
+}
+
+.terminal-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    min-height: 30px;
 }
 
 #hero h2 {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     margin-bottom: 10px;
-}
-
-.highlight {
-    color: var(--primary);
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffffff;
+    letter-spacing: -1px;
 }
 
 .subtitle {
     font-size: 1.3rem;
-    color: var(--primary-light);
+    color: var(--primary);
     margin-bottom: 10px;
+    font-weight: 300;
 }
 
 .tagline {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 10px auto 25px;
+    color: #9ca3af;
+}
+
+/* ---------- Status LED ---------- */
+.status-led {
+    margin: 20px 0 30px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+.led {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse 2s infinite;
+}
+
+.led.green {
+    background: #10b981;
+    box-shadow: 0 0 10px rgba(16,185,129,0.5);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 /* ---------- Buttons ---------- */
 .btn {
     display: inline-block;
     background: var(--primary);
-    color: #fff;
+    color: #0a0a0f;
     padding: 12px 30px;
-    border-radius: 30px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     transition: background 0.2s, transform 0.2s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background: var(--primary-light);
+    background: var(--primary-dark);
     transform: scale(1.02);
+    color: #0a0a0f;
 }
 
 .btn-small {
     display: inline-block;
     background: var(--primary);
-    color: #fff;
+    color: #0a0a0f;
     padding: 8px 18px;
-    border-radius: 20px;
+    border-radius: 6px;
     text-decoration: none;
     font-size: 0.9rem;
+    font-weight: 600;
     transition: background 0.2s;
 }
 
 .btn-small:hover {
-    background: var(--primary-light);
+    background: var(--primary-dark);
+    color: #0a0a0f;
 }
 
 /* ---------- Sektionen ---------- */
@@ -169,99 +226,142 @@ section h2 {
     text-align: center;
     margin-bottom: 35px;
     position: relative;
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffffff;
 }
 
 section h2::after {
     content: '';
     display: block;
     width: 60px;
-    height: 4px;
+    height: 3px;
     background: var(--primary);
     margin: 10px auto 0;
     border-radius: 2px;
 }
 
-/* ---------- Skills ---------- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    text-align: center;
+/* ---------- Skills als Tags ---------- */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.skill-card {
+.skill-tag {
     background: var(--card-bg);
-    padding: 20px 10px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    font-weight: 500;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-}
-
-/* ---------- Erfahrung ---------- */
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-}
-
-.exp-card {
-    background: var(--card-bg);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.exp-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-}
-
-.exp-card h3 {
-    color: var(--primary);
-    margin-bottom: 5px;
-}
-
-.exp-date {
+    border: 1px solid var(--card-border);
+    padding: 10px 20px;
+    border-radius: 8px;
     font-size: 0.9rem;
-    color: var(--primary-light);
-    font-weight: 600;
-    margin-bottom: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: default;
 }
 
-/* ---------- Projekte ---------- */
+.skill-tag:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* ---------- Projekte / Homelab ---------- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
 .project-card {
     background: var(--card-bg);
+    border: 1px solid var(--card-border);
     padding: 25px;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 8px;
+    transition: all 0.3s;
 }
 
 .project-card:hover {
+    border-color: var(--primary);
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow);
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
 .project-card h3 {
-    margin-bottom: 10px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 15px;
+}
+
+.tag {
+    background: rgba(0,212,255,0.15);
+    color: var(--primary);
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(0,212,255,0.2);
+}
+
+.project-card code {
+    background: rgba(0,0,0,0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
     color: var(--primary);
 }
 
 .project-card p {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+.project-card strong {
+    color: #ffffff;
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status.success {
+    background: rgba(16,185,129,0.2);
+    color: #10b981;
+    border: 1px solid rgba(16,185,129,0.3);
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+/* ---------- Über mich ---------- */
+#about p {
+    max-width: 700px;
+    margin: 0 auto 15px;
+    text-align: center;
+    color: #d1d5db;
 }
 
 /* ---------- Kontakt ---------- */
@@ -271,15 +371,16 @@ section h2::after {
 
 .contact-info {
     background: var(--card-bg);
+    border: 1px solid var(--card-border);
     padding: 25px;
-    border-radius: 16px;
+    border-radius: 8px;
     max-width: 500px;
     margin: 0 auto 25px;
-    box-shadow: var(--shadow);
 }
 
 .contact-info p {
     margin: 8px 0;
+    color: #d1d5db;
 }
 
 .contact-info a {
@@ -301,7 +402,13 @@ footer {
     text-align: center;
     padding: 30px 0;
     background: var(--card-bg);
+    border-top: 1px solid var(--card-border);
     margin-top: 20px;
+}
+
+footer p {
+    color: #6b7280;
+    font-size: 0.9rem;
 }
 
 /* ---------- Responsive ---------- */
@@ -316,71 +423,32 @@ footer {
         gap: 15px;
     }
 
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
     #hero h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .subtitle {
         font-size: 1.1rem;
     }
-}
-/* ---------- Projekte / Homelab ---------- */
-.project-icon {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
 
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 10px 0 15px;
-}
+    .terminal-line {
+        font-size: 0.9rem;
+    }
 
-.tag {
-    background: var(--primary);
-    color: #fff;
-    padding: 3px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-}
+    .skills-tags {
+        gap: 8px;
+    }
 
-.project-card code {
-    background: rgba(0,0,0,0.08);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-}
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
 
-body.dark .project-card code {
-    background: rgba(255,255,255,0.1);
-}
-
-.status {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.status.success {
-    background: #10b981;
-    color: #fff;
-}
-
-.project-links {
-    margin-top: 15px;
-}
-
-.project-card p {
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
-
-.project-card strong {
-    color: var(--primary);
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
