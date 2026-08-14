@@ -324,3 +324,63 @@ footer {
         font-size: 1.1rem;
     }
 }
+/* ---------- Projekte / Homelab ---------- */
+.project-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 15px;
+}
+
+.tag {
+    background: var(--primary);
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.project-card code {
+    background: rgba(0,0,0,0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+body.dark .project-card code {
+    background: rgba(255,255,255,0.1);
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status.success {
+    background: #10b981;
+    color: #fff;
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+.project-card p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.project-card strong {
+    color: var(--primary);
+}
