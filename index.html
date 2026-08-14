@@ -7,29 +7,33 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation -->
+        <!-- Navigation -->
     <nav>
         <div class="container">
-            <h1 class="logo">Tarek Ladouani</h1>
+            <h1 class="logo">root@tarek:~#</h1>
             <ul class="nav-links">
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Erfahrung</a></li>
-                <li><a href="#projects">Projekte</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about">whoami</a></li>
+                <li><a href="#skills">ls -la /skills</a></li>
+                <li><a href="#projects">cat /projects</a></li>
+                <li><a href="#contact">mail</a></li>
             </ul>
             <button id="theme-toggle" aria-label="Dark Mode umschalten">🌙</button>
         </div>
     </nav>
 
-    <!-- Hero-Bereich -->
+        <!-- Hero-Bereich -->
     <header id="hero">
         <div class="container">
-            <h2>Hallo, ich bin <span class="highlight">Tarek Ladouani</span></h2>
+            <p class="terminal-line" id="typewriter"></p>
+            <h2>Tarek Ladouani</h2>
             <p class="subtitle">Angehender Fachinformatiker für Systemintegration</p>
             <p class="tagline">
-                IT-Support | Netzwerktechnik | Betriebssysteme | IT-Sicherheit
+                Begeistert von Netzwerken, virtuellen Maschinen und fehlerresistenten Systemen.
             </p>
+            <div class="status-led">
+                <span class="led green"></span> System: Online &nbsp;|&nbsp;
+                <span class="led green"></span> Bereit für Herausforderungen
+            </div>
             <a href="#contact" class="btn">Kontakt aufnehmen</a>
         </div>
     </header>
@@ -37,22 +41,21 @@
     <!-- Über mich -->
     <section id="about">
         <div class="container">
-            <h2>Über mich</h2>
+            <h2>[~]$ whoami</h2>
             <p>
                 Nach meinem Fachabitur habe ich ein Informatikstudium begonnen und schnell festgestellt,
                 dass mich die <strong>praxisnahe Arbeit mit IT-Systemen</strong> deutlich stärker begeistert
-                als die theoretischen Inhalte. Diese Erkenntnis hat meinen Entschluss gefestigt,
-                eine fundierte und anwendungsorientierte Ausbildung zu verfolgen.
+                als die theoretischen Inhalte.
             </p>
             <p>
-                Mit dem erfolgreich abgeschlossenen <strong>Google IT Support Professional Certificate</strong>
-                habe ich mir strukturierte Kenntnisse in <strong>Netzwerktechnik, Betriebssystemen
-                und IT-Sicherheit</strong> angeeignet, die ich in einer professionellen Umgebung
-                weiterentwickeln möchte.
+                In meinem Homelab habe ich mir selbstständig Wissen in den Bereichen
+                <strong>Docker, Virtualisierung, Netzwerktechnik und Linux</strong> angeeignet.
+                Das Google IT Support Professional Certificate hat meine Grundlagen in
+                IT-Sicherheit und Systemadministration gefestigt.
             </p>
             <p>
-                Ich bin <strong>motiviert, zuverlässig und lernbereit</strong> – und freue mich darauf,
-                Teil eines dynamischen IT-Teams zu werden.
+                Jetzt möchte ich diese praktische Erfahrung in einer professionellen IT-Umgebung
+                vertiefen und mich zur Fachkraft für Systemintegration entwickeln.
             </p>
         </div>
     </section>
@@ -60,18 +63,20 @@
     <!-- Skills -->
     <section id="skills">
         <div class="container">
-            <h2>Meine Fähigkeiten</h2>
-            <div class="skills-grid">
-                <div class="skill-card">💻 Windows &amp; Linux (Ubuntu)</div>
-                <div class="skill-card">🌐 Netzwerktechnik</div>
-                <div class="skill-card">🔒 IT-Sicherheit</div>
-                <div class="skill-card">🖥️ Systemadministration</div>
-                <div class="skill-card">📧 Google IT Support Certificate</div>
-                <div class="skill-card">📊 MS Office (Grundkenntnisse)</div>
-                <div class="skill-card">🗣️ Deutsch (Muttersprache)</div>
-                <div class="skill-card">🗣️ Arabisch (2. Muttersprache)</div>
-                <div class="skill-card">🗣️ Englisch (Gut)</div>
-                <div class="skill-card">🗣️ Französisch (Grundkenntnisse)</div>
+            <h2>[~]$ ls -la /skills</h2>
+            <div class="skills-tags">
+                <span class="skill-tag">🐧 Linux (Ubuntu)</span>
+                <span class="skill-tag">🪟 Windows Client</span>
+                <span class="skill-tag">🌐 TCP/IP</span>
+                <span class="skill-tag">📡 DHCP</span>
+                <span class="skill-tag">🔍 DNS</span>
+                <span class="skill-tag">🐳 Docker</span>
+                <span class="skill-tag">📦 Virtualisierung</span>
+                <span class="skill-tag">🔒 IT-Sicherheit</span>
+                <span class="skill-tag">🖥️ Systemadministration</span>
+                <span class="skill-tag">📊 Google IT Support Certificate</span>
+                <span class="skill-tag">🗣️ Deutsch (Muttersprache)</span>
+                <span class="skill-tag">🗣️ Englisch (Gut)</span>
             </div>
         </div>
     </section>
@@ -105,11 +110,11 @@
         </div>
     </section>
 
-       <!-- Projekte / Homelab -->
+    <!-- Projekte / Homelab -->
     <section id="projects">
         <div class="container">
             <h2>🧪 Mein Homelab & Projekte</h2>
-            <p style="text-align:center; max-width:700px; margin: -20px auto 40px; color: var(--primary-light);">
+            <p style="text-align:center; max-width:700px; margin: -20px auto 40px; color: #9ca3af;">
                 Hier zeige ich, was ich in meiner Freizeit aufgebaut habe – ganz praktisch, ohne Tutorial-Copy-Paste.
             </p>
 
@@ -188,8 +193,8 @@
             </div>
 
             <!-- Zusatz-Info -->
-            <div style="text-align:center; margin-top:40px; padding:20px; background:var(--card-bg); border-radius:12px;">
-                <p style="font-size:0.95rem;">
+            <div style="text-align:center; margin-top:40px; padding:20px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px;">
+                <p style="font-size:0.95rem; color:#9ca3af;">
                     🔗 Mein ganzes Setup ist dokumentiert – bei Interesse zeige ich gerne mehr Details im Gespräch!
                 </p>
             </div>
