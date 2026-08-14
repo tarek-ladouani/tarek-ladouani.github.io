@@ -32,3 +32,51 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 });
 
 console.log('🚀 Tareks Bewerbungsseite ist bereit!');
+
+// ---------- Typewriter-Effekt ----------
+const typewriterElement = document.getElementById('typewriter');
+const texts = [
+    '> Initializing Bewerbung ...',
+    '> Ziel: Ausbildung FiSi 2026',
+    '> Bereit für neue Herausforderungen'
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let isWaiting = false;
+
+function typeEffect() {
+    const currentText = texts[textIndex];
+    
+    if (isDeleting) {
+        typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+    }
+    
+    let speed = isDeleting ? 50 : 100;
+    
+    if (!isDeleting && charIndex === currentText.length) {
+        speed = 2000;
+        isWaiting = true;
+        setTimeout(() => {
+            isDeleting = true;
+            isWaiting = false;
+        }, 2000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        speed = 500;
+    }
+    
+    if (!isWaiting) {
+        setTimeout(typeEffect, speed);
+    } else {
+        setTimeout(typeEffect, 100);
+    }
+}
+
+typeEffect();
