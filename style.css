@@ -29,12 +29,31 @@ body {
     padding: 0 20px;
 }
 
-/* ---------- Dark Mode (Standard) ---------- */
+/* ---------- Dark Mode ---------- */
 body.dark {
     --bg: #0a0a0f;
     --text: #e5e7eb;
     --card-bg: rgba(255,255,255,0.03);
     --card-border: rgba(255,255,255,0.05);
+}
+
+body.dark .logo {
+    color: var(--primary);
+}
+
+body.dark .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+body.dark .contact-info {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+body.dark footer {
+    background: var(--card-bg);
+    border-top: 1px solid var(--card-border);
 }
 
 /* ---------- Schriftarten ---------- */
