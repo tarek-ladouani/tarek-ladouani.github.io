@@ -132,7 +132,7 @@
         </div>
     </section>
 
-        <!-- Projekte / Homelab -->
+           <!-- Projekte / Homelab -->
     <section id="projects">
         <div class="container">
             <h2>🧪 Mein Homelab & Projekte</h2>
@@ -143,7 +143,7 @@
 
             <div class="projects-grid">
 
-                <!-- Projekt 1: Hardware & Vorbereitung -->
+                <!-- Projekt 1: Homelab -->
                 <div class="project-card">
                     <div class="project-icon">🖥️</div>
                     <h3>Homelab – Vom Büro-PC zum Server</h3>
@@ -152,71 +152,43 @@
                         <span class="tag">BIOS</span>
                         <span class="tag">Optimierung</span>
                     </div>
-                    
-                    <p><strong>🎯 Ziel:</strong> Einen alten Dell-Laptop als Server nutzbar machen.</p>
-                    <p><strong>🛠️ Hardware:</strong> Dell-Laptop, BIOS 1.8.0, RAM 4GB → 8GB.</p>
-                    
-                    <p><strong>⚠️ Problem:</strong> Bloatware und unnötige Dienste verbrauchten Ressourcen.</p>
-                    <p><strong>🔍 Analyse:</strong> Task-Manager und Autostart überprüft.</p>
-                    <p><strong>✅ Lösung:</strong> SupportAssist, Dell Update und Co. deinstalliert, visuelle Effekte deaktiviert.</p>
-                    <p><strong>📈 Ergebnis:</strong> System läuft stabil und hat genug RAM für Virtualisierung.</p>
-                    
-                    <p><strong>💡 Gelernt:</strong> Systemvorbereitung, Performance-Optimierung, Hardware-Kompatibilität.</p>
-                    
-                    <div class="project-links">
-                        <span class="status success">✅ Abgeschlossen</span>
-                    </div>
+                    <p>
+                        Dell-Laptop mit BIOS 1.8.0, RAM-Upgrade von 4GB auf 8GB,
+                        Bloatware entfernt – Vorbereitung für Virtualisierung.
+                    </p>
+                    <a href="projects/homelab.html" class="btn-small">📖 Details ansehen</a>
                 </div>
 
-                <!-- Projekt 2: Docker & Containerisierung -->
+                <!-- Projekt 2: Docker -->
                 <div class="project-card">
                     <div class="project-icon">🐳</div>
-                    <h3>Docker Homelab – Case Study</h3>
+                    <h3>Docker Homelab – Containerisierung</h3>
                     <div class="project-tags">
                         <span class="tag">Docker</span>
                         <span class="tag">WSL2</span>
                         <span class="tag">Linux</span>
                     </div>
-                    
-                    <p><strong>🎯 Ziel:</strong> Eine Multi-Container-Umgebung mit Webserver, PHP und Datenbank aufsetzen.</p>
-                    <p><strong>📦 Technologien:</strong> WSL2 → Ubuntu 24.04 → Docker → docker-compose.yml</p>
-                    <p><strong>🏗️ Architektur:</strong> Nginx → PHP 8.2 → MariaDB</p>
-                    
-                    <p><strong>⚠️ Problem:</strong> PHP-Container konnte keine Verbindung zur MariaDB herstellen.</p>
-                    <p><strong>🔍 Analyse:</strong> Logs überprüft mit <code>docker logs</code> → Netzwerk-Konfiguration kontrolliert.</p>
-                    <p><strong>✅ Lösung:</strong> Docker-Compose-Netzwerk angepasst und <code>php-mysql</code> Erweiterung installiert.</p>
-                    <p><strong>📈 Ergebnis:</strong> Alle Container kommunizieren miteinander, Anwendung läuft.</p>
-                    
-                    <p><strong>💡 Gelernt:</strong> Containerisierung, Docker-Netzwerke, Volumes, Troubleshooting mit Logs.</p>
-                    
-                    <div class="project-links">
-                        <span class="status success">✅ Läuft</span>
-                    </div>
+                    <p>
+                        Multi-Container-Umgebung mit Nginx, PHP 8.2 und MariaDB,
+                        orchestriert mit docker-compose.yml.
+                    </p>
+                    <a href="projects/docker.html" class="btn-small">📖 Details ansehen</a>
                 </div>
 
-                <!-- Projekt 3: Gästebuch-App -->
+                <!-- Projekt 3: Gästebuch -->
                 <div class="project-card">
                     <div class="project-icon">📝</div>
-                    <h3>Gästebuch – Dynamische Webanwendung</h3>
+                    <h3>Gästebuch mit PHP &amp; Datenbank</h3>
                     <div class="project-tags">
                         <span class="tag">PHP</span>
                         <span class="tag">MySQL</span>
                         <span class="tag">Webentwicklung</span>
                     </div>
-                    
-                    <p><strong>🎯 Ziel:</strong> Eine Webseite, auf der Besucher Nachrichten hinterlassen können.</p>
-                    <p><strong>⚙️ Funktionsweise:</strong> Formular → <code>INSERT</code> in Datenbank → <code>SELECT</code> für Anzeige.</p>
-                    
-                    <p><strong>⚠️ Problem:</strong> Die Uhrzeit der Einträge war falsch (UTC statt deutscher Zeit).</p>
-                    <p><strong>🔍 Analyse:</strong> PHP-Konfiguration geprüft → <code>date.timezone</code> war nicht gesetzt.</p>
-                    <p><strong>✅ Lösung:</strong> In der PHP-Konfiguration <code>date.timezone = Europe/Berlin</code> gesetzt.</p>
-                    <p><strong>📈 Ergebnis:</strong> Einträge werden mit korrekter deutscher Zeit gespeichert.</p>
-                    
-                    <p><strong>💡 Gelernt:</strong> PHP + MySQLi, SQL-Befehle, Container-Kommunikation, Konfiguration von PHP.</p>
-                    
-                    <div class="project-links">
-                        <span class="status success">✅ Funktioniert live</span>
-                    </div>
+                    <p>
+                        Dynamische Webanwendung – Formular für Name + Nachricht,
+                        Speicherung in MariaDB, Anzeige mit SELECT.
+                    </p>
+                    <a href="projects/guestbook.html" class="btn-small">📖 Details ansehen</a>
                 </div>
 
             </div>
