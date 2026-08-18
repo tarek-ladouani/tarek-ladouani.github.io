@@ -2,11 +2,16 @@
 const toggleBtn = document.getElementById('theme-toggle');
 const currentTheme = localStorage.getItem('theme');
 
+// Dark Mode beim Laden wiederherstellen
 if (currentTheme === 'dark') {
     document.body.classList.add('dark');
     toggleBtn.textContent = '☀️';
+} else {
+    document.body.classList.remove('dark');
+    toggleBtn.textContent = '🌙';
 }
 
+// Toggle-Funktion
 toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 
@@ -30,8 +35,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-console.log('🚀 Tareks Bewerbungsseite ist bereit!');
 
 // ---------- Typewriter-Effekt ----------
 const typewriterElement = document.getElementById('typewriter');
@@ -79,4 +82,7 @@ function typeEffect() {
     }
 }
 
+// Typewriter starten
 typeEffect();
+
+console.log('🚀 Tareks Bewerbungsseite ist bereit!');
