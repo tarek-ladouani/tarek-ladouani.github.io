@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homelab – Tarek Ladouani</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <h1 class="logo">root@tarek:~#</h1>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">whoami</a></li>
+                <li><a href="../index.html#skills">ls -la /skills</a></li>
+                <li><a href="../index.html#projects">cat /projects</a></li>
+                <li><a href="../index.html#contact">mail</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Dark Mode umschalten">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Projekt-Detail -->
+    <section style="padding-top:40px;">
+        <div class="container">
+
+            <!-- Back-Button -->
+            <a href="../index.html#projects" style="color:var(--primary); text-decoration:none; font-family:'JetBrains Mono',monospace;">
+                ← zurück zur Übersicht
+            </a>
+
+            <h1 style="font-family:'JetBrains Mono',monospace; color:#ffffff; margin-top:30px; font-size:2.5rem;">
+                🖥️ Homelab – Case Study
+            </h1>
+
+            <div style="max-width:800px; margin:0 auto;">
+
+                <!-- 01 – Overview -->
+                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">01 — Overview</h2>
+                <p>
+                    Ich habe einen alten Dell-Laptop als Homelab-Server vorbereitet. Ziel war es, das System
+                    für Virtualisierung und Containerisierung zu optimieren.
+                </p>
+
+                <!-- 02 – Hardware -->
+                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">02 — Hardware</h2>
+                <ul style="color:#d1d5db; list-style:square; padding-left:20px;">
+                    <li>Dell-Laptop (ca. 5 Jahre alt)</li>
+                    <li>BIOS-Version: 1.8.0</li>
+                    <li>RAM: 4GB → 8GB (Upgrade)</li>
+                    <li>Festplatte: 256GB SSD</li>
+                </ul>
+
+                <!-- 03 – Steps -->
+                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">03 — Steps</h2>
+                <ol style="color:#d1d5db; padding-left:20px;">
+                    <li><strong>BIOS-Update:</strong> Version 1.8.0 mit <code>/forceit</code> geflasht</li>
+                    <li><strong>RAM-Upgrade:</strong> Von 4GB auf 8GB aufgerüstet</li>
+                    <li><strong>Treiber installiert:</strong> Chipsatz, Grafik, Audio, Netzwerk – manuell von Dell</li>
+                    <li><strong>Bloatware entfernt:</strong> SupportAssist, Dell Update und Co. deinstalliert</li>
+                    <li><strong>Windows optimiert:</strong> Visuelle Effekte deaktiviert, Autostart bereinigt, virtuellen Speicher angepasst</li>
+                </ol>
+
+                <!-- 04 – Problems -->
+                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">04 — Problems</h2>
+                <p><strong>Problem #1: WSL2-Kernel-Fehler (0x800701bc).</strong></p>
+                <p style="color:#d1d5db;">
+                    Bei der WSL2-Installation kam der Fehler <code>0x800701bc</code> – der WSL2-Kernel fehlte.
+                </p>
+
+                <p style="margin-top:15px;"><strong>Problem #2: System war langsam durch Bloatware.</strong></p>
+                <p style="color:#d1d5db;">
+                    Der Laptop hatte viele vorinstallierte Programme, die im Hintergrund liefen und RAM verbrauchten.
+                </p>
+
+                <!-- 05 – Solution -->
+                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">05 — Solution</h2>
+                <p><strong>Lösung #1: WSL2-Kernel manuell installieren.</strong></p>
+                <p style="color:#d1d5db;">
+                    Den aktuellen WSL2-Kernel von Microsoft heruntergeladen und installiert. Danach war WSL2 einsatzbereit.
+                </p>
+
+                <p style="margin-top:15px;"><strong>Lösung #2: System bereinigen und optimieren.</strong></p>
+                <p style="color:#d1d5db;">
+                    SupportAssist, Dell Update und andere Bloatware deinstalliert. Visuelle Effekte deaktiviert und Autostart bereinigt.
+                    Dadurch wurde RAM für die eigentliche Arbeit freigemacht.
+                </p>
+
+                <!-- 06 – What I Learned -->
+                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">06 — What I Learned</h2>
+                <ul style="color:#d1d5db; list-style:square; padding-left:20px;">
+                    <li>Systemvorbereitung für Virtualisierung</li>
+                    <li>Hardware-Kompatibilität prüfen</li>
+                    <li>Performance-Optimierung von Windows</li>
+                    <li>WSL2-Installation und Fehlerbehebung</li>
+                    <li>Systematische Problemlösung</li>
+                </ul>
+
+                <!-- GitHub & Live Demo -->
+                <div style="margin:40px 0; display:flex; gap:15px; flex-wrap:wrap;">
+                    <a href="#" class="btn" style="background:var(--primary); color:#0a0a0f;">🐙 GitHub-Repo</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tarek Ladouani. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
