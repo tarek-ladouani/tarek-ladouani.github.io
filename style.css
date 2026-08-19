@@ -20,40 +20,12 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    transition: background 0.3s, color 0.3s;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* ---------- Dark Mode ---------- */
-body.dark {
-    --bg: #0a0a0f;
-    --text: #e5e7eb;
-    --card-bg: rgba(255,255,255,0.03);
-    --card-border: rgba(255,255,255,0.05);
-}
-
-body.dark .logo {
-    color: var(--primary);
-}
-
-body.dark .project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-}
-
-body.dark .contact-info {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-}
-
-body.dark footer {
-    background: var(--card-bg);
-    border-top: 1px solid var(--card-border);
 }
 
 /* ---------- Schriftarten ---------- */
@@ -108,24 +80,6 @@ nav .container {
 
 .nav-links a:hover {
     color: var(--primary);
-}
-
-#theme-toggle {
-    background: none;
-    border: 2px solid var(--text);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: var(--text);
-    transition: 0.2s;
-}
-
-#theme-toggle:hover {
-    background: var(--primary);
-    color: #0a0a0f;
-    border-color: var(--primary);
 }
 
 /* ---------- Hero ---------- */
@@ -470,160 +424,4 @@ footer p {
     .projects-grid {
         grid-template-columns: 1fr;
     }
-}
-
-/* ---------- DARK MODE ---------- */
-body.dark {
-    --bg: #0a0a0f;
-    --text: #e5e7eb;
-    --card-bg: rgba(255,255,255,0.03);
-    --card-border: rgba(255,255,255,0.05);
-    --shadow: 0 4px 30px rgba(0,0,0,0.3);
-}
-
-/* Hintergrund & Text in Dark Mode */
-body.dark {
-    background: var(--bg);
-    color: var(--text);
-}
-
-/* Navigation in Dark Mode */
-body.dark nav {
-    background: rgba(10,10,15,0.9);
-    border-bottom: 1px solid var(--card-border);
-}
-
-body.dark .logo {
-    color: var(--primary);
-}
-
-/* Hero in Dark Mode */
-body.dark #hero {
-    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
-}
-
-body.dark #hero h2 {
-    color: #ffffff;
-}
-
-body.dark .tagline {
-    color: #9ca3af;
-}
-
-/* Skills in Dark Mode */
-body.dark .skill-tag {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    color: var(--text);
-}
-
-body.dark .skill-tag:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-}
-
-/* Projekte in Dark Mode */
-body.dark .project-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-}
-
-body.dark .project-card h3 {
-    color: #ffffff;
-}
-
-body.dark .project-card p {
-    color: #d1d5db;
-}
-
-body.dark .project-card strong {
-    color: #ffffff;
-}
-
-/* Über mich in Dark Mode */
-body.dark #about p {
-    color: #d1d5db;
-}
-
-/* Kontakt in Dark Mode */
-body.dark .contact-info {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-}
-
-body.dark .contact-info p {
-    color: #d1d5db;
-}
-
-body.dark .contact-info a {
-    color: var(--primary);
-}
-
-/* Footer in Dark Mode */
-body.dark footer {
-    background: var(--card-bg);
-    border-top: 1px solid var(--card-border);
-}
-
-body.dark footer p {
-    color: #6b7280;
-}
-
-/* Status LED in Dark Mode */
-body.dark .status-led {
-    color: #9ca3af;
-}
-
-/* Terminal-Line in Dark Mode */
-body.dark .terminal-line {
-    color: var(--primary);
-}
-
-/* Buttons in Dark Mode */
-body.dark .btn {
-    background: var(--primary);
-    color: #0a0a0f;
-}
-
-body.dark .btn:hover {
-    background: var(--primary-dark);
-}
-
-body.dark .btn-small {
-    background: var(--primary);
-    color: #0a0a0f;
-}
-
-body.dark .btn-small:hover {
-    background: var(--primary-dark);
-}
-
-/* Tags in Dark Mode */
-body.dark .tag {
-    background: rgba(0,212,255,0.15);
-    color: var(--primary);
-    border: 1px solid rgba(0,212,255,0.2);
-}
-
-/* Code in Dark Mode */
-body.dark .project-card code {
-    background: rgba(0,0,0,0.3);
-    color: var(--primary);
-}
-
-/* ---------- ECHTER HELLER MODUS ---------- */
-:root {
-    --bg: #f5f5f5;
-    --text: #1a1a2e;
-    --card-bg: #ffffff;
-    --card-border: #e0e0e0;
-    --shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-body.dark {
-    --bg: #0a0a0f;
-    --text: #e5e7eb;
-    --card-bg: rgba(255,255,255,0.03);
-    --card-border: rgba(255,255,255,0.05);
-    --shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
