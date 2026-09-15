@@ -7,221 +7,143 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-               <!-- Navigation -->
+
+    <!-- Navigation -->
     <nav>
-    <div class="container">
-        <h1 class="logo">Tarek Ladouani</h1>
-        <ul class="nav-links">
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projekte</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </div>
-</nav>
-
-           <!-- Hero-Bereich -->
-    <header id="hero">
-    <div class="container">
-        <p class="terminal-line" id="typewriter"></p>
-        <h2>Tarek Ladouani</h2>
-        <p class="subtitle">Angehender Fachinformatiker für Systemintegration</p>
-        <p class="tagline">
-            Ich habe mir Docker, Linux und Netzwerktechnik selbst beigebracht – 
-            und möchte diese Leidenschaft jetzt in eine Ausbildung einbringen.
-        </p>
-        <div class="status-led">
-            <span class="led green"></span> Offen für eine Ausbildung 2026
+        <div class="container">
+            <a href="#" class="logo">Tarek Ladouani</a>
+            <ul class="nav-links">
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
         </div>
-        <a href="#contact" class="btn">Kontakt aufnehmen</a>
-    </div>
-</header>
+    </nav>
 
-        <!-- Über mich -->
+    <!-- Hero -->
+    <header id="hero">
+        <div class="container">
+            <p class="eyebrow">Bewerbung 2026</p>
+            <h1>Tarek Ladouani</h1>
+            <p class="role">Angehender Fachinformatiker für Systemintegration</p>
+            <p class="intro">
+                Ich habe mir Docker, Linux und Netzwerktechnik selbst beigebracht
+                und möchte diese Leidenschaft jetzt in einer Ausbildung einbringen.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Kontakt aufnehmen</a>
+                <a href="#projects" class="btn btn-secondary">Projekte ansehen</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Über mich -->
     <section id="about">
         <div class="container">
-            <h2>[~]$ whoami</h2>
-            <p>
-                Mich fasziniert besonders, wie <strong>Hardware, Betriebssysteme, Netzwerke und Anwendungen</strong>
-                zu einem funktionierenden Gesamtsystem zusammenspielen. Deshalb baue und teste ich in meiner Freizeit
-                eigene IT-Systeme und dokumentiere, was ich dabei lerne.
-            </p>
-            <p>
-                Nach meinem Fachabitur habe ich ein Informatikstudium begonnen und schnell festgestellt,
-                dass mich die <strong>praxisnahe Arbeit mit IT-Systemen</strong> deutlich stärker begeistert
-                als die theoretischen Inhalte. Deshalb habe ich mich entschieden, eine Ausbildung zum
-                <strong>Fachinformatiker für Systemintegration</strong> zu machen.
-            </p>
-            <p>
-                Mit dem <strong>Google IT Support Professional Certificate</strong> habe ich mir strukturierte
-                Grundlagen in IT-Sicherheit, Systemadministration und Netzwerktechnik angeeignet.
-                Im eigenen Homelab habe ich diese Kenntnisse dann direkt in die Praxis umgesetzt.
-            </p>
+            <h2>Über mich</h2>
+            <div class="about-content">
+                <p>
+                    Mich fasziniert, wie <strong>Hardware, Betriebssysteme, Netzwerke und Anwendungen</strong>
+                    zu einem funktionierenden Gesamtsystem zusammenspielen. Deshalb baue und teste ich
+                    in meiner Freizeit eigene IT-Systeme.
+                </p>
+                <p>
+                    Nach meinem Fachabitur habe ich ein Informatikstudium begonnen und schnell gemerkt,
+                    dass mir die <strong>praxisnahe Arbeit mit IT-Systemen</strong> deutlich mehr liegt
+                    als die Theorie. Darum möchte ich eine Ausbildung zum Fachinformatiker für
+                    Systemintegration machen.
+                </p>
+                <p>
+                    Mit dem <strong>Google IT Support Professional Certificate</strong> habe ich mir
+                    strukturierte Grundlagen in IT-Sicherheit, Systemadministration und Netzwerktechnik
+                    angeeignet – und im eigenen Homelab direkt in die Praxis umgesetzt.
+                </p>
+            </div>
         </div>
     </section>
 
-          <!-- Skills -->
+    <!-- Skills -->
     <section id="skills">
         <div class="container">
-            <h2>Meine Skills</h2>
-            <p class="section-subtitle">
-                Technologien, mit denen ich bereits praktische Erfahrung gesammelt habe.
-            </p>
-
+            <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-group">
+                <div class="skill-card">
                     <h3>Betriebssysteme</h3>
-                    <p>Windows · Ubuntu Linux</p>
+                    <p>Windows, Ubuntu Linux, WSL2</p>
                 </div>
-                <div class="skill-group">
-                    <h3>Container &amp; Server</h3>
-                    <p>Docker · Docker Compose · Nginx</p>
+                <div class="skill-card">
+                    <h3>Container & Server</h3>
+                    <p>Docker, Docker Compose, Nginx</p>
                 </div>
-                <div class="skill-group">
+                <div class="skill-card">
                     <h3>Datenbanken</h3>
-                    <p>MariaDB · SQL</p>
+                    <p>MariaDB, MySQL, SQL</p>
                 </div>
-                <div class="skill-group">
+                <div class="skill-card">
                     <h3>Netzwerke</h3>
-                    <p>TCP/IP · DNS · DHCP</p>
+                    <p>TCP/IP, DNS, DHCP</p>
                 </div>
-                <div class="skill-group">
+                <div class="skill-card">
                     <h3>Programmierung</h3>
-                    <p>PHP · HTML/CSS</p>
+                    <p>PHP, HTML/CSS, JavaScript</p>
                 </div>
-                <div class="skill-group">
+                <div class="skill-card">
                     <h3>Sprachen</h3>
-                    <p>Deutsch (Muttersprache) · Englisch (Gut)</p>
+                    <p>Deutsch (Muttersprache), Englisch (gut)</p>
                 </div>
             </div>
         </div>
     </section>
-                
-                <!-- Container & Server -->
-                <span class="skill-tag">🐳 Docker</span>
-                <span class="skill-tag">📦 Docker Compose</span>
-                <span class="skill-tag">🌐 Nginx</span>
-                
-                <!-- Datenbanken -->
-                <span class="skill-tag">🗄️ MariaDB</span>
-                <span class="skill-tag">📊 MySQL</span>
-                <span class="skill-tag">📝 SQL</span>
-                
-                <!-- Programmierung -->
-                <span class="skill-tag">💻 PHP</span>
-                <span class="skill-tag">🌐 HTML/CSS</span>
-                <span class="skill-tag">⚡ JavaScript</span>
-                
-                <!-- Netzwerke -->
-                <span class="skill-tag">🌍 TCP/IP</span>
-                <span class="skill-tag">🔍 DNS</span>
-                <span class="skill-tag">📡 DHCP</span>
-                
-                <!-- Sicherheit & Zertifikate -->
-                <span class="skill-tag">🔒 IT-Sicherheit</span>
-                <span class="skill-tag">📜 Google IT Support Certificate</span>
-                
-                <!-- Sprachen -->
-                <span class="skill-tag">🗣️ Deutsch (Muttersprache)</span>
-                <span class="skill-tag">🗣️ Englisch (Gut)</span>
-            </div>
-        </div>
-    </section>
 
-        <!-- Berufserfahrung -->
-    <section id="experience">
+    <!-- Projekte -->
+    <section id="projects">
         <div class="container">
-            <h2>📋 Praktische Erfahrung</h2>
-            <div style="max-width:700px; margin:0 auto;">
-                <ul style="list-style:none; padding:0;">
-                    <li style="padding:10px 15px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:6px; margin-bottom:8px; display:flex; justify-content:space-between; flex-wrap:wrap;">
-                        <span><strong>🛒 Aldi, Kehl</strong> – Einzelhandel</span>
-                        <span style="color:#6b7280; font-size:0.9rem;">08.2019 (2 Wochen)</span>
-                    </li>
-                    <li style="padding:10px 15px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:6px; margin-bottom:8px; display:flex; justify-content:space-between; flex-wrap:wrap;">
-                        <span><strong>💊 Rohans Anker Apotheke, Kehl</strong> – Organisation</span>
-                        <span style="color:#6b7280; font-size:0.9rem;">03.2018 (1 Woche)</span>
-                    </li>
-                    <li style="padding:10px 15px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:6px; margin-bottom:8px; display:flex; justify-content:space-between; flex-wrap:wrap;">
-                        <span><strong>📚 Schülerhilfe, Kehl</strong> – Pädagogik</span>
-                        <span style="color:#6b7280; font-size:0.9rem;">05.2018 (1 Woche)</span>
-                    </li>
-                    <li style="padding:10px 15px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:6px; margin-bottom:8px; display:flex; justify-content:space-between; flex-wrap:wrap;">
-                        <span><strong>🚗 BHG / Audi, Kehl</strong> – Automobil</span>
-                        <span style="color:#6b7280; font-size:0.9rem;">01.2016 (1 Woche)</span>
-                    </li>
-                </ul>
-                <p style="text-align:center; font-size:0.85rem; color:#6b7280; margin-top:10px;">
-                    Diese Praktika haben mir erste Einblicke in Arbeitsabläufe und Kundenkontakt gegeben.
-                </p>
-            </div>
-        </div>
-    </section>
+            <h2>Projekte</h2>
+            <div class="projects-grid">
 
-           <!-- Projekte / Homelab -->
-   <section id="projects">
-    <div class="container">
-        <h2>Meine Projekte</h2>
-        <p class="section-subtitle">
-            Eigene Projekte, in denen ich IT-Systeme aufgebaut, konfiguriert und Probleme gelöst habe.
-        </p>
-        <div class="projects-grid">
-
-                <!-- Projekt 1: Homelab -->
-                <div class="project-card">
-                    <div class="project-icon">🖥️</div>
+                <article class="project-card">
+                    <span class="project-number">01</span>
                     <h3>Homelab – Vom Büro-PC zum Server</h3>
-                    <div class="project-tags">
-                        <span class="tag">Hardware</span>
-                        <span class="tag">BIOS</span>
-                        <span class="tag">Optimierung</span>
-                    </div>
                     <p>
-                        Dell-Laptop mit BIOS 1.8.0, RAM-Upgrade von 4GB auf 8GB,
-                        Bloatware entfernt – Vorbereitung für Virtualisierung.
+                        Einen alten Dell-Laptop als Server vorbereitet:
+                        BIOS-Update, RAM-Upgrade von 4 auf 8 GB, Windows optimiert.
                     </p>
-                    <a href="projects/homelab.html" class="btn-small">📖 Details ansehen</a>
-                </div>
-
-                <!-- Projekt 2: Docker -->
-                <div class="project-card">
-                    <div class="project-icon">🐳</div>
-                    <h3>Docker Homelab – Containerisierung</h3>
                     <div class="project-tags">
-                        <span class="tag">Docker</span>
-                        <span class="tag">WSL2</span>
-                        <span class="tag">Linux</span>
+                        <span>Hardware</span>
+                        <span>BIOS</span>
                     </div>
-                    <p>
-                        Multi-Container-Umgebung mit Nginx, PHP 8.2 und MariaDB,
-                        orchestriert mit docker-compose.yml.
-                    </p>
-                    <a href="projects/docker.html" class="btn-small">📖 Details ansehen</a>
-                </div>
+                    <a href="projects/homelab.html" class="link-arrow">Details ansehen →</a>
+                </article>
 
-                <!-- Projekt 3: Gästebuch -->
-                <div class="project-card">
-                    <div class="project-icon">📝</div>
-                    <h3>Gästebuch mit PHP &amp; Datenbank</h3>
+                <article class="project-card">
+                    <span class="project-number">02</span>
+                    <h3>Docker – Multi-Container-Umgebung</h3>
+                    <p>
+                        WSL2 mit Ubuntu, Docker Compose mit Nginx, PHP 8.2 und MariaDB.
+                        Fehlerbehebung über Logs und Netzwerk-Konfiguration.
+                    </p>
                     <div class="project-tags">
-                        <span class="tag">PHP</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Webentwicklung</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
                     </div>
+                    <a href="projects/docker.html" class="link-arrow">Details ansehen →</a>
+                </article>
+
+                <article class="project-card">
+                    <span class="project-number">03</span>
+                    <h3>Gästebuch – PHP &amp; Datenbank</h3>
                     <p>
-                        Dynamische Webanwendung – Formular für Name + Nachricht,
-                        Speicherung in MariaDB, Anzeige mit SELECT.
+                        Dynamische Webanwendung mit PHP und MariaDB:
+                        Formular, Speicherung per INSERT, Anzeige per SELECT.
                     </p>
-                    <a href="projects/guestbook.html" class="btn-small">📖 Details ansehen</a>
-                </div>
+                    <div class="project-tags">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="projects/guestbook.html" class="link-arrow">Details ansehen →</a>
+                </article>
 
-            </div>
-
-            <!-- Zusatz-Info -->
-            <div style="text-align:center; margin-top:40px; padding:20px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px;">
-                <p style="font-size:0.95rem; color:#9ca3af;">
-                    🔗 Mein ganzes Setup ist dokumentiert – bei Interesse zeige ich gerne mehr Details im Gespräch!
-                </p>
             </div>
         </div>
     </section>
@@ -230,20 +152,30 @@
     <section id="contact">
         <div class="container">
             <h2>Kontakt</h2>
-            <div class="contact-info">
-                <p><strong>📧 E-Mail:</strong> <a href="mailto:ladouani.tarek@gmail.com">ladouani.tarek@gmail.com</a></p>
-                <p><strong>📞 Telefon:</strong> <a href="tel:+4915204078963">0152 040 789 63</a></p>
-                <p><strong>📍 Adresse:</strong> Richard-Wagner-Str. 19, 77694 Kehl</p>
-                <p><strong>🚗 Führerschein:</strong> Klasse B</p>
+            <p class="contact-intro">
+                Ich freue mich über eine Einladung zum Gespräch.
+            </p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="contact-label">E-Mail</span>
+                    <a href="mailto:ladouani.tarek@gmail.com">ladouani.tarek@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Telefon</span>
+                    <a href="tel:+4915204078963">0152 040 789 63</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Adresse</span>
+                    <p>Richard-Wagner-Str. 19, 77694 Kehl</p>
+                </div>
             </div>
-            <a href="mailto:ladouani.tarek@gmail.com" class="btn">Jetzt E-Mail schreiben</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Tarek Ladouani. Alle Rechte vorbehalten.</p>
+            <p>© 2026 Tarek Ladouani</p>
         </div>
     </footer>
 
