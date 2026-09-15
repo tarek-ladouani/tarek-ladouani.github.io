@@ -6,12 +6,12 @@
 }
 
 :root {
-    --bg: #0a0a0f;
-    --text: #e5e7eb;
-    --primary: #00d4ff;
-    --primary-dark: #0099cc;
-    --card-bg: rgba(255,255,255,0.03);
-    --card-border: rgba(255,255,255,0.05);
+    --bg: #1a1512;
+    --text: #e8e0d5;
+    --primary: #d4a574;
+    --primary-dark: #b8935f;
+    --card-bg: rgba(255,255,255,0.04);
+    --card-border: rgba(212,165,116,0.15);
     --shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
 
@@ -29,13 +29,17 @@ body {
 }
 
 /* ---------- Schriftarten ---------- */
-h1, h2, h3, .logo, .nav-links a, .terminal-line {
+h1, h2, h3, .logo {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.terminal-line {
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 /* ---------- Navigation ---------- */
 nav {
-    background: rgba(10,10,15,0.8);
+    background: rgba(26,21,18,0.85);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--card-border);
@@ -53,10 +57,10 @@ nav .container {
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: 700;
     color: var(--primary);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 .logo:hover {
@@ -96,8 +100,7 @@ nav .container {
 }
 
 .terminal-line {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--primary);
     margin-bottom: 30px;
     min-height: 30px;
@@ -106,23 +109,23 @@ nav .container {
 #hero h2 {
     font-size: 3.5rem;
     margin-bottom: 10px;
-    font-family: 'JetBrains Mono', monospace;
     color: #ffffff;
     letter-spacing: -1px;
+    font-weight: 700;
 }
 
 .subtitle {
     font-size: 1.3rem;
     color: var(--primary);
     margin-bottom: 10px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .tagline {
     font-size: 1.1rem;
     max-width: 600px;
     margin: 10px auto 25px;
-    color: #9ca3af;
+    color: #b8b0a5;
 }
 
 /* ---------- Status LED ---------- */
@@ -130,7 +133,7 @@ nav .container {
     margin: 20px 0 30px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.9rem;
-    color: #9ca3af;
+    color: #b8b0a5;
 }
 
 .led {
@@ -156,7 +159,7 @@ nav .container {
 .btn {
     display: inline-block;
     background: var(--primary);
-    color: #0a0a0f;
+    color: #1a1512;
     padding: 12px 30px;
     border-radius: 8px;
     text-decoration: none;
@@ -169,13 +172,13 @@ nav .container {
 .btn:hover {
     background: var(--primary-dark);
     transform: scale(1.02);
-    color: #0a0a0f;
+    color: #1a1512;
 }
 
 .btn-small {
     display: inline-block;
     background: var(--primary);
-    color: #0a0a0f;
+    color: #1a1512;
     padding: 8px 18px;
     border-radius: 6px;
     text-decoration: none;
@@ -186,7 +189,7 @@ nav .container {
 
 .btn-small:hover {
     background: var(--primary-dark);
-    color: #0a0a0f;
+    color: #1a1512;
 }
 
 /* ---------- Sektionen ---------- */
@@ -199,8 +202,8 @@ section h2 {
     text-align: center;
     margin-bottom: 35px;
     position: relative;
-    font-family: 'JetBrains Mono', monospace;
     color: #ffffff;
+    font-weight: 700;
 }
 
 section h2::after {
@@ -269,8 +272,8 @@ section h2::after {
 .project-card h3 {
     color: #ffffff;
     margin-bottom: 8px;
-    font-family: 'JetBrains Mono', monospace;
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .project-tags {
@@ -281,14 +284,14 @@ section h2::after {
 }
 
 .tag {
-    background: rgba(0,212,255,0.15);
+    background: rgba(212,165,116,0.15);
     color: var(--primary);
     padding: 3px 12px;
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.3px;
-    border: 1px solid rgba(0,212,255,0.2);
+    border: 1px solid rgba(212,165,116,0.25);
 }
 
 .project-card code {
@@ -304,7 +307,7 @@ section h2::after {
     margin-bottom: 8px;
     line-height: 1.5;
     font-size: 0.95rem;
-    color: #d1d5db;
+    color: #c8c0b5;
 }
 
 .project-card strong {
@@ -334,7 +337,7 @@ section h2::after {
     max-width: 700px;
     margin: 0 auto 15px;
     text-align: center;
-    color: #d1d5db;
+    color: #c8c0b5;
 }
 
 /* ---------- Kontakt ---------- */
@@ -353,7 +356,7 @@ section h2::after {
 
 .contact-info p {
     margin: 8px 0;
-    color: #d1d5db;
+    color: #c8c0b5;
 }
 
 .contact-info a {
@@ -374,13 +377,13 @@ section h2::after {
 footer {
     text-align: center;
     padding: 30px 0;
-    background: var(--card-bg);
+    background: rgba(0,0,0,0.2);
     border-top: 1px solid var(--card-border);
     margin-top: 20px;
 }
 
 footer p {
-    color: #6b7280;
+    color: #8a8275;
     font-size: 0.9rem;
 }
 
