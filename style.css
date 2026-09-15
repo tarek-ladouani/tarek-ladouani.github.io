@@ -256,31 +256,42 @@ section h2::after {
 }
 
 /* ---------- Skills ---------- */
-.skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 100%;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
-.skill-tag {
+.skill-group {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-size: 0.88rem;
-    font-weight: 500;
-    color: var(--text);
+    padding: 24px 28px;
+    border-radius: 10px;
     transition: all 0.2s;
-    cursor: default;
     box-shadow: var(--shadow-sm);
 }
 
-.skill-tag:hover {
+.skill-group:hover {
     border-color: var(--primary);
-    color: var(--primary);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow);
+}
+
+.skill-group h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+}
+
+.skill-group p {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* ---------- Projekte ---------- */
