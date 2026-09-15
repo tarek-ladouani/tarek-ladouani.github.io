@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Docker Homelab – Tarek Ladouani</title>
+    <title>Docker – Tarek Ladouani</title>
     <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -11,137 +11,122 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-           <h1 class="logo">Tarek Ladouani</h1>
-<ul class="nav-links">
-    <li><a href="../index.html#about">Über mich</a></li>
-    <li><a href="../index.html#skills">Skills</a></li>
-    <li><a href="../index.html#projects">Projekte</a></li>
-    <li><a href="../index.html#contact">Kontakt</a></li>
-</ul>
-            <button id="theme-toggle" aria-label="Dark Mode umschalten">🌙</button>
+            <a href="../index.html" class="logo">Tarek Ladouani</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">Über mich</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#projects">Projekte</a></li>
+                <li><a href="../index.html#contact">Kontakt</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Projekt-Detail -->
-    <section style="padding-top:40px;">
+    <!-- Projekt -->
+    <article class="project-detail">
         <div class="container">
 
-            <!-- Back-Button -->
-            <a href="../index.html#projects" style="color:var(--primary); text-decoration:none; font-family:'JetBrains Mono',monospace;">
-                ← zurück zur Übersicht
-            </a>
+            <a href="../index.html#projects" class="back-link">← Zurück zu den Projekten</a>
 
-            <h1 style="font-family:'JetBrains Mono',monospace; color:#ffffff; margin-top:30px; font-size:2.5rem;">
-                🐳 Docker Homelab – Case Study
-            </h1>
+            <span class="project-number">02</span>
+            <h1>Docker – Multi-Container-Umgebung</h1>
+            <p class="project-lead">
+                Eine Multi-Container-Umgebung mit Webserver, PHP und Datenbank
+                aufgesetzt – orchestriert mit Docker Compose.
+            </p>
 
-            <div style="max-width:800px; margin:0 auto;">
+            <div class="project-tags">
+                <span>Docker</span>
+                <span>Linux</span>
+                <span>WSL2</span>
+            </div>
 
-                <!-- 01 – Overview -->
-                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">01 — Overview</h2>
+            <div class="detail-section">
+                <h2>Ziel</h2>
                 <p>
-                    Ich habe einen alten Dell-Laptop als Linux-Server eingerichtet, um Containerisierung mit Docker zu lernen.
-                    Ziel war es, eine Multi-Container-Umgebung mit Webserver, PHP und Datenbank aufzusetzen.
+                    Eine Umgebung aufsetzen, in der Nginx, PHP und MariaDB als
+                    eigenständige Container zusammenarbeiten – gesteuert über
+                    eine einzige <code>docker-compose.yml</code>.
                 </p>
+            </div>
 
-                <!-- 02 – Hardware -->
-                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">02 — Hardware</h2>
-                <ul style="color:#d1d5db; list-style:square; padding-left:20px;">
-                    <li>Dell-Laptop</li>
-                    <li>BIOS-Version: 1.8.0</li>
-                    <li>RAM: 4GB → 8GB (Upgrade)</li>
-                    <li>Festplatte: 256GB SSD</li>
-                </ul>
-
-                <!-- 03 – Software -->
-                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">03 — Software</h2>
-                <ul style="color:#d1d5db; list-style:square; padding-left:20px;">
+            <div class="detail-section">
+                <h2>Technologien</h2>
+                <ul>
                     <li>Windows 11 mit WSL2</li>
                     <li>Ubuntu 24.04 (WSL2)</li>
                     <li>Docker &amp; Docker Compose</li>
                     <li>Nginx (Webserver)</li>
-                    <li>PHP 8.2</li>
+                    <li>PHP 8.2 (Backend)</li>
                     <li>MariaDB (Datenbank)</li>
                 </ul>
+            </div>
 
-                <!-- 04 – Architecture -->
-                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">04 — Architecture</h2>
-                <pre style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:20px; color:#9ca3af; font-family:'JetBrains Mono',monospace; overflow-x:auto;">
+            <div class="detail-section">
+                <h2>Architektur</h2>
+                <pre class="architecture">
 Internet
     │
     ▼
 ┌─────────────┐
-│   Nginx     │  ← Webserver (Port 8080)
-│  (Webserver)│
+│   Nginx     │   Webserver (Port 8080)
 └──────┬──────┘
        │
        ▼
 ┌─────────────┐
-│    PHP      │  ← PHP 8.2 mit MySQLi
-│   (Backend) │
+│    PHP      │   PHP 8.2 mit MySQLi
 └──────┬──────┘
        │
        ▼
 ┌─────────────┐
-│  MariaDB    │  ← Datenbank für Gästebuch
-│ (Datenbank) │
+│  MariaDB    │   Datenbank
 └─────────────┘</pre>
+            </div>
 
-                <!-- 05 – Problems -->
-                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">05 — Problems</h2>
-                <p><strong>Problem #1: PHP konnte keine Verbindung zur Datenbank herstellen.</strong></p>
-                <p style="color:#d1d5db;">
-                    Der PHP-Container konnte die MariaDB nicht erreichen. Die Fehlermeldung war:
-                    <code style="background:rgba(0,0,0,0.3); padding:2px 6px; border-radius:4px; color:var(--primary);">
-                        SQLSTATE[HY000] [2002] Connection refused
-                    </code>
-                </p>
+            <div class="detail-section">
+                <h2>Probleme & Lösungen</h2>
 
-                <p style="margin-top:15px;"><strong>Problem #2: Uhrzeit der Einträge war falsch.</strong></p>
-                <p style="color:#d1d5db;">
-                    Die Gästebuch-Einträge wurden mit UTC-Zeit gespeichert, nicht mit deutscher Zeit.
-                </p>
-
-                <!-- 06 – Solution -->
-                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">06 — Solution</h2>
-                <p><strong>Lösung #1: Docker-Netzwerk konfigurieren.</strong></p>
-                <p style="color:#d1d5db;">
-                    Mit <code>docker logs</code> die Fehlerlogs geprüft. Dann die <code>docker-compose.yml</code> angepasst:
-                    Die Container wurden im selben Netzwerk verbunden und die Umgebungsvariablen für die Datenbankverbindung korrigiert.
-                    Außerdem wurde die PHP-Erweiterung <code>php-mysql</code> nachinstalliert.
-                </p>
-
-                <p style="margin-top:15px;"><strong>Lösung #2: Zeitzone in PHP setzen.</strong></p>
-                <p style="color:#d1d5db;">
-                    In der PHP-Konfiguration wurde <code>date.timezone = Europe/Berlin</code> gesetzt.
-                </p>
-
-                <!-- 07 – What I Learned -->
-                <h2 style="font-family:'JetBrains Mono',monospace; color:var(--primary); margin-top:40px;">07 — What I Learned</h2>
-                <ul style="color:#d1d5db; list-style:square; padding-left:20px;">
-                    <li>Containerisierung mit Docker und Docker Compose</li>
-                    <li>Netzwerkkommunikation zwischen Containern</li>
-                    <li>Troubleshooting mit <code>docker logs</code></li>
-                    <li>PHP + MySQLi für Datenbankzugriff</li>
-                    <li>SQL-Befehle (CREATE, INSERT, SELECT)</li>
-                    <li>Konfiguration von PHP (Zeitzone, Erweiterungen)</li>
-                </ul>
-
-                <!-- GitHub & Live Demo -->
-                <div style="margin:40px 0; display:flex; gap:15px; flex-wrap:wrap;">
-                    <a href="#" class="btn" style="background:var(--primary); color:#0a0a0f;">🐙 GitHub-Repo</a>
-                    <a href="#" class="btn" style="background:transparent; border:1px solid var(--primary); color:var(--primary);">🌐 Live-Demo</a>
+                <div class="problem-block">
+                    <h3>Problem 1: PHP konnte keine Verbindung zur Datenbank herstellen</h3>
+                    <p>
+                        Fehlermeldung: <code>SQLSTATE[HY000] [2002] Connection refused</code>.
+                        Der PHP-Container konnte die MariaDB nicht erreichen.
+                    </p>
+                    <p>
+                        <strong>Lösung:</strong> Mit <code>docker logs</code> die Fehlerlogs
+                        geprüft. Die Container im selben Docker-Netzwerk verbunden und die
+                        Umgebungsvariablen der Datenbankverbindung korrigiert.
+                    </p>
                 </div>
 
+                <div class="problem-block">
+                    <h3>Problem 2: MySQLi-Erweiterung fehlte</h3>
+                    <p>
+                        PHP konnte die Datenbank nicht ansprechen, weil die MySQLi-Erweiterung
+                        nicht installiert war.
+                    </p>
+                    <p>
+                        <strong>Lösung:</strong> Erweiterung im Container mit
+                        <code>docker-php-ext-install mysqli</code> nachinstalliert.
+                    </p>
+                </div>
+            </div>
+
+            <div class="detail-section">
+                <h2>Was ich gelernt habe</h2>
+                <ul>
+                    <li>Containerisierung mit Docker und Docker Compose</li>
+                    <li>Netzwerkkommunikation zwischen Containern</li>
+                    <li>Volumes für persistente Daten</li>
+                    <li>Fehlerbehebung mit <code>docker logs</code> und <code>docker exec</code></li>
+                </ul>
             </div>
 
         </div>
-    </section>
+    </article>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Tarek Ladouani. Alle Rechte vorbehalten.</p>
+            <p>© 2026 Tarek Ladouani</p>
         </div>
     </footer>
 
