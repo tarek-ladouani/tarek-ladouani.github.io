@@ -6,14 +6,24 @@
 }
 
 :root {
-    --bg: #0f1117;
-    --bg-elevated: #161922;
-    --text: #e6e8eb;
-    --text-muted: #8b93a3;
-    --primary: #5b9dd9;
-    --primary-hover: #7cb3e5;
-    --border: #262b38;
-    --border-subtle: #1d212b;
+    --bg: #ffffff;
+    --bg-subtle: #f8fafc;
+    --bg-card: #ffffff;
+    --text: #0f172a;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+    --border: #e2e8f0;
+    --border-hover: #cbd5e1;
+    --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+    --shadow: 0 4px 6px -1px rgba(15,23,42,0.07), 0 2px 4px -2px rgba(15,23,42,0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(15,23,42,0.08), 0 8px 10px -6px rgba(15,23,42,0.04);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,10 +32,11 @@ body {
     color: var(--text);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-    max-width: 1080px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -33,20 +44,23 @@ body {
 /* ---------- Typografie ---------- */
 h1, h2, h3, .logo {
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.02em;
+    color: var(--text);
 }
 
 .terminal-line {
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: var(--primary);
 }
 
 /* ---------- Navigation ---------- */
 nav {
-    background: rgba(15,17,23,0.85);
+    background: rgba(255,255,255,0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border);
     padding: 18px 0;
     position: sticky;
     top: 0;
@@ -61,16 +75,16 @@ nav .container {
 }
 
 .logo {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--text);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 32px;
+    gap: 36px;
     flex-wrap: wrap;
 }
 
@@ -78,108 +92,114 @@ nav .container {
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: var(--text);
+    color: var(--primary);
 }
 
 /* ---------- Hero ---------- */
 #hero {
-    padding: 100px 0 80px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: 120px 0 100px;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    border-bottom: 1px solid var(--border);
 }
 
 #hero .container {
-    width: 100%;
     text-align: left;
+    max-width: 900px;
 }
 
 .terminal-line {
-    font-size: 0.95rem;
-    color: var(--primary);
-    margin-bottom: 24px;
-    min-height: 28px;
+    margin-bottom: 28px;
+    min-height: 24px;
 }
 
 #hero h2 {
-    font-size: 4rem;
-    margin-bottom: 16px;
+    font-size: 4.2rem;
+    margin-bottom: 20px;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 800;
     color: var(--text);
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    font-weight: 700;
 }
 
 .subtitle {
-    font-size: 1.35rem;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .tagline {
-    font-size: 1.05rem;
-    max-width: 620px;
-    margin: 20px 0 32px;
+    font-size: 1.1rem;
+    max-width: 640px;
+    margin: 20px 0 36px;
     color: var(--text-muted);
     line-height: 1.7;
 }
 
 /* ---------- Status ---------- */
 .status-led {
-    margin: 24px 0 36px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
+    margin: 28px 0 40px;
+    font-size: 0.9rem;
     color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card);
+    padding: 10px 18px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
 }
 
 .led {
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
-    margin-right: 6px;
     animation: pulse 2s infinite;
 }
 
 .led.green {
     background: #10b981;
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.15);
 }
 
 @keyframes pulse {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+    50% { opacity: 0.5; }
 }
 
 /* ---------- Buttons ---------- */
 .btn {
     display: inline-block;
     background: var(--primary);
-    color: #0f1117;
-    padding: 13px 28px;
-    border-radius: 6px;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: background 0.2s, transform 0.15s;
+    transition: all 0.2s;
     border: none;
     cursor: pointer;
+    box-shadow: var(--shadow-sm);
 }
 
 .btn:hover {
-    background: var(--primary-hover);
+    background: var(--primary-dark);
     transform: translateY(-1px);
-    color: #0f1117;
+    box-shadow: var(--shadow);
 }
 
 .btn-small {
     display: inline-block;
-    background: transparent;
+    background: var(--bg-card);
     color: var(--primary);
     padding: 9px 18px;
     border-radius: 6px;
@@ -191,29 +211,48 @@ nav .container {
 }
 
 .btn-small:hover {
-    background: var(--bg-elevated);
     border-color: var(--primary);
-    color: var(--primary-hover);
+    background: var(--primary-light);
 }
 
 /* ---------- Sektionen ---------- */
 section {
-    padding: 90px 0;
+    padding: 100px 0;
+}
+
+section:nth-of-type(even) {
+    background: var(--bg-subtle);
 }
 
 section h2 {
-    font-size: 1.85rem;
-    margin-bottom: 12px;
+    font-size: 2rem;
+    margin-bottom: 16px;
     color: var(--text);
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-align: left;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .section-subtitle {
     color: var(--text-muted);
-    margin-bottom: 50px;
     font-size: 1rem;
-    max-width: 600px;
+    max-width: 640px;
+    margin-bottom: 48px;
+    line-height: 1.7;
 }
 
 /* ---------- Skills ---------- */
@@ -221,91 +260,96 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .skill-tag {
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle);
-    padding: 9px 16px;
-    border-radius: 6px;
-    font-size: 0.85rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.88rem;
     font-weight: 500;
     color: var(--text);
     transition: all 0.2s;
     cursor: default;
+    box-shadow: var(--shadow-sm);
 }
 
 .skill-tag:hover {
     border-color: var(--primary);
-    color: var(--primary-hover);
+    color: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
 }
 
 /* ---------- Projekte ---------- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
 }
 
 .project-card {
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle);
-    padding: 28px;
-    border-radius: 10px;
-    transition: all 0.25s;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 32px;
+    border-radius: 12px;
+    transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
 }
 
 .project-card:hover {
-    border-color: var(--border);
-    transform: translateY(-3px);
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
 
 .project-icon {
-    font-size: 1.8rem;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: 18px;
     display: block;
 }
 
 .project-card h3 {
     color: var(--text);
-    margin-bottom: 10px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin: 12px 0 16px;
+    margin: 14px 0 18px;
 }
 
 .tag {
-    background: rgba(91,157,217,0.08);
+    background: var(--primary-light);
     color: var(--primary);
-    padding: 3px 10px;
-    border-radius: 4px;
-    font-size: 0.7rem;
+    padding: 4px 11px;
+    border-radius: 6px;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
-    border: 1px solid rgba(91,157,217,0.15);
+    letter-spacing: 0.01em;
 }
 
 .project-card code {
-    background: rgba(255,255,255,0.04);
-    padding: 2px 6px;
-    border-radius: 3px;
+    background: var(--bg-subtle);
+    padding: 2px 7px;
+    border-radius: 4px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.82rem;
-    color: var(--primary-hover);
+    color: var(--primary-dark);
+    border: 1px solid var(--border);
 }
 
 .project-card p {
     margin-bottom: 10px;
-    line-height: 1.65;
-    font-size: 0.9rem;
+    line-height: 1.7;
+    font-size: 0.92rem;
     color: var(--text-muted);
 }
 
@@ -316,29 +360,29 @@ section h2 {
 
 .status {
     display: inline-block;
-    padding: 3px 10px;
-    border-radius: 4px;
-    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
     font-weight: 600;
 }
 
 .status.success {
-    background: rgba(16,185,129,0.1);
-    color: #34d399;
-    border: 1px solid rgba(16,185,129,0.2);
+    background: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
 }
 
 .project-links {
-    margin-top: 18px;
+    margin-top: 20px;
 }
 
 /* ---------- Über mich ---------- */
 #about p {
-    max-width: 720px;
-    margin: 0 0 18px;
+    max-width: 760px;
+    margin: 0 0 20px;
     color: var(--text-muted);
-    font-size: 0.98rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.85;
 }
 
 #about strong {
@@ -348,16 +392,17 @@ section h2 {
 
 /* ---------- Kontakt ---------- */
 .contact-info {
-    background: var(--bg-elevated);
-    border: 1px solid var(--border-subtle);
-    padding: 28px;
-    border-radius: 10px;
-    max-width: 520px;
-    margin: 0 0 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 32px;
+    border-radius: 12px;
+    max-width: 560px;
+    margin: 0 0 28px;
+    box-shadow: var(--shadow-sm);
 }
 
 .contact-info p {
-    margin: 10px 0;
+    margin: 12px 0;
     color: var(--text-muted);
     font-size: 0.95rem;
 }
@@ -365,29 +410,35 @@ section h2 {
 .contact-info a {
     color: var(--primary);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.2s;
 }
 
 .contact-info a:hover {
-    color: var(--primary-hover);
+    color: var(--primary-dark);
     text-decoration: underline;
+}
+
+.contact-info strong {
+    color: var(--text);
+    font-weight: 600;
 }
 
 /* ---------- Footer ---------- */
 footer {
     padding: 40px 0;
-    border-top: 1px solid var(--border-subtle);
-    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    background: var(--bg-subtle);
 }
 
 footer p {
-    color: var(--text-muted);
-    font-size: 0.85rem;
+    color: var(--text-light);
+    font-size: 0.88rem;
+    text-align: center;
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     nav .container {
         flex-direction: column;
         gap: 14px;
@@ -395,28 +446,27 @@ footer p {
 
     .nav-links {
         justify-content: center;
-        gap: 18px;
+        gap: 20px;
     }
 
     .nav-links a {
-        font-size: 0.82rem;
+        font-size: 0.85rem;
     }
 
     #hero {
-        min-height: auto;
-        padding: 60px 0 50px;
+        padding: 70px 0 60px;
     }
 
     #hero h2 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
 
     .subtitle {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
     }
 
     .terminal-line {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     section {
@@ -424,11 +474,12 @@ footer p {
     }
 
     section h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .skills-tags {
@@ -436,7 +487,11 @@ footer p {
     }
 
     .skill-tag {
-        font-size: 0.78rem;
-        padding: 7px 12px;
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+
+    .project-card {
+        padding: 24px;
     }
 }
