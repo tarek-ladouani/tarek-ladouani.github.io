@@ -13,9 +13,9 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 // ---------- Typewriter-Effekt ----------
 const typewriterElement = document.getElementById('typewriter');
 const texts = [
-    '> Initializing Bewerbung ...',
-    '> Ziel: Ausbildung FiSi 2026',
-    '> Bereit für neue Herausforderungen'
+    '> Willkommen auf meiner Bewerbungsseite',
+    '> Ziel: Ausbildung zum Fachinformatiker 2026',
+    '> Ich freue mich auf Ihre Nachricht'
 ];
 
 let textIndex = 0;
