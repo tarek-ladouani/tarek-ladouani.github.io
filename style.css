@@ -463,3 +463,292 @@ footer p {
         padding: 24px;
     }
 }
+/* ---------- Projekt-Detailseiten ---------- */
+.project-detail {
+    padding: 80px 0 140px;
+}
+
+/* Zurück-Link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-soft);
+    text-decoration: none;
+    margin-bottom: 64px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.15s;
+}
+
+.back-link:hover {
+    color: var(--accent);
+    background: var(--bg-soft);
+}
+
+/* Projekt-Kopf */
+.project-detail .project-number {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+}
+
+.project-detail h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: var(--text);
+    max-width: 800px;
+}
+
+.project-lead {
+    font-size: 1.2rem;
+    color: var(--text-soft);
+    max-width: 680px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.project-detail .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 80px;
+}
+
+.project-detail .project-tags span {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-soft);
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 8px;
+}
+
+/* Detail-Sektionen */
+.detail-section {
+    max-width: 760px;
+    margin-bottom: 72px;
+    padding-bottom: 0;
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section h2 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 24px;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.detail-section h2::after {
+    display: none;
+}
+
+.detail-section p {
+    font-size: 1.05rem;
+    color: var(--text-soft);
+    line-height: 1.85;
+    margin-bottom: 18px;
+}
+
+.detail-section p:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section ul,
+.detail-section ol {
+    padding-left: 0;
+    list-style: none;
+    color: var(--text-soft);
+    font-size: 1.02rem;
+    line-height: 1.9;
+}
+
+.detail-section ul li,
+.detail-section ol li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 14px;
+}
+
+.detail-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.detail-section ol {
+    counter-reset: step;
+}
+
+.detail-section ol li {
+    counter-increment: step;
+    padding-left: 44px;
+}
+
+.detail-section ol li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.05em;
+}
+
+.detail-section strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.detail-section code {
+    background: var(--bg-soft);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    color: var(--accent-dark);
+    border: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+/* Architektur-Block */
+.architecture {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    color: var(--text-soft);
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+    margin-top: 8px;
+}
+
+/* Problem-Blöcke */
+.problem-block {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.problem-block:last-child {
+    margin-bottom: 0;
+}
+
+.problem-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 12px 0 0 12px;
+}
+
+.problem-block h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+}
+
+.problem-block p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.problem-block p:last-child {
+    margin-bottom: 0;
+}
+
+.problem-block strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Responsive Detailseiten */
+@media (max-width: 720px) {
+    .project-detail {
+        padding: 40px 0 80px;
+    }
+
+    .back-link {
+        margin-bottom: 40px;
+    }
+
+    .project-detail h1 {
+        font-size: 2rem;
+        margin-bottom: 18px;
+    }
+
+    .project-lead {
+        font-size: 1.05rem;
+        margin-bottom: 24px;
+    }
+
+    .project-detail .project-tags {
+        margin-bottom: 56px;
+    }
+
+    .detail-section {
+        margin-bottom: 52px;
+    }
+
+    .detail-section h2 {
+        margin-bottom: 18px;
+    }
+
+    .detail-section p {
+        font-size: 1rem;
+    }
+
+    .detail-section ul li,
+    .detail-section ol li {
+        font-size: 0.98rem;
+    }
+
+    .architecture {
+        padding: 20px 22px;
+        font-size: 0.78rem;
+    }
+
+    .problem-block {
+        padding: 24px 26px;
+    }
+
+    .problem-block h3 {
+        font-size: 1rem;
+    }
+}
