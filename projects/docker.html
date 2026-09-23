@@ -62,8 +62,27 @@
             </div>
 
             <div class="detail-section">
+    <h2>Einblick ins System</h2>
+    <p>
+        Hier sieht man die laufenden Container und die Konfiguration:
+    </p>
+    <img src="../assets/docker-ps.png" 
+         alt="Laufende Docker-Container: nginx, php, mariadb" 
+         class="project-image" />
+    <p class="image-caption">
+        Alle drei Container laufen stabil (nginx, php:8.2-fpm, mariadb).
+    </p>
+    <img src="../assets/docker-compose.png" 
+         alt="Auszug aus der docker-compose.yml" 
+         class="project-image" />
+    <p class="image-caption">
+        Die docker-compose.yml definiert Webserver, PHP und Datenbank in einem Netzwerk.
+    </p>
+</div>
+            <div class="detail-section">
                 <h2>Architektur</h2>
                 <pre class="architecture">
+                    
 Internet
     │
     ▼
